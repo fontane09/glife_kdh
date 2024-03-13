@@ -1,0 +1,221 @@
+@charset 'utf-8';
+@import url(./my_reset.css);
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: bold;
+  font-style: normal;
+
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "S-CoreDream-3Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* font-family: "Font Awesome 6 Free";
+font-weight: 900;
+Solid → 900
+Regular, Brands → 400
+Light → 300 */
+
+:root {
+  /* main color */
+  --main-color: #144aaa;
+  --second-color: #f0f4ff;
+
+  font-size: 16px;
+}
+
+/* ----------header 부분 css -------*/
+
+body {
+  /* border: 1px solid black; */
+  max-width: 1440px;
+  width: calc(100% - 1.25em);
+}
+
+.wrap {
+  /* border: 1px solid red; */
+  display: flex;
+  color: var(--main-color);
+}
+
+.hd {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.hd .logo {
+  /* padding: 1rem 0; */
+  width: 120px;
+}
+
+.hd nav::before {
+  background-color: #007aff;
+  position: absolute;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.hd nav:hover::before {
+  height: 120px;
+  opacity: 1;
+}
+
+.gnb {
+  /* border: 1px solid orange; */
+  display: flex;
+  align-items: center;
+}
+
+.gnb > a {
+  font-size: 0.857em;
+}
+
+.gnb > sub {
+  color: var(--main-color);
+  font-size: 0.875rem;
+}
+
+.gnb .sub a {
+  display: none;
+  transition: 0.3s;
+}
+
+.gnb .sub a:hover {
+  display: flex;
+}
+
+.hd .func {
+  display: flex;
+  gap: 20px;
+}
+.func a:hover {
+  text-decoration: underline;
+}
+
+.ham {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .hd nav,
+  .func {
+    display: none;
+  }
+
+  .hd .ham {
+    display: block;
+  }
+
+  /* width 1280px이하로 내려가면 nav,func 사라짐 */
+}
+
+/* ---------section.mainVisual 부분 --------- */
+
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: GmarketSansBold, GmarketSansMedium, S-CoreDream-3Light;
+  /* font-size: 14px; */
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  margin-left: 33%;
+  width: 66%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 16px;
+  color: #007aff;
+  opacity: 1;
+  background: transparent;
+}
+
+.swiper-pagination-bullet-active {
+  background: #007aff;
+}
+
+/* ------- mainVisual 왼편 제목 요소 ---------- */
+
+.mainviseal {
+  display: flex;
+}
+
+.mainVisual h2 {
+  /* border: 1px solid red; */
+  font-size: 3.6875rem;
+  /* =30px */
+  color: var(--main-color);
+}
+
+.mainVisual h2 span {
+  font-size: 1.875rem;
+  /* =59px */
+}
+
+/*------------------ nav.quick 부분 css ----------- */
+
+.quick {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.quick ul {
+  display: flex;
+}
+
+.quick li {
+  margin: 50px;
+  font-size: 1.5625rem;
+  /* =25px */
+}
+
+.quick i:hover {
+  transform: translateX(10px);
+  transition: 0.3s;
+}
+
+/* 이달의 교육 section css */
